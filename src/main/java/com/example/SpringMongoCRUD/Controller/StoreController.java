@@ -34,4 +34,8 @@ public class StoreController {
    public List<StoreList> getStoresByName(@RequestParam String name) {
        return storeServices.getStoresByName(name);
    }
+   @GetMapping("/searchByNumber")
+   public  StoreList getStoreByNumber(@RequestParam String number) {
+       return storeServices.getStoreByNumber(number);
+   }
 }

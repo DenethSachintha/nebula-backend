@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface CategoryRepo extends MongoRepository<Category,String> {
     List<Category> findAllByCategorynameContaining(String categoryName);
+    Category findAllByCategorynumberContaining(String categoryNumber);
 
 }

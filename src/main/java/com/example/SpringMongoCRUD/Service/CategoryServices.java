@@ -34,4 +34,8 @@ public class CategoryServices {
   public List<Category> getCategoryByName(String name) {
       return repo.findAllByCategorynameContaining(name);
   }
+
+    public Category getCategoryByNumber(String number) {
+        return repo.findAllByCategorynumberContaining(number);
+    }
 }

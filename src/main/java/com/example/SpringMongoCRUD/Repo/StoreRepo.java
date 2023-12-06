@@ -7,10 +7,9 @@ import java.util.List;
 
 public interface StoreRepo extends MongoRepository<StoreList,String> {
     List<StoreList> findAllByStoreNumberIn(List<String> numbers);
-        List<StoreList> findAllByStoreNameContaining(String storeName);
-
+    List<StoreList> findAllByStoreNameContaining(String storeName);
 /*
     List<StoreList> findAllByStoreNumberContaining(String number);
 */
-
+    StoreList findAllByStoreNumberContaining(String storeNumber);
 }

@@ -1,7 +1,6 @@
 package com.example.SpringMongoCRUD.Controller;
 
 import com.example.SpringMongoCRUD.Entity.Category;
-import com.example.SpringMongoCRUD.Entity.Component;
 import com.example.SpringMongoCRUD.Service.CategoryServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -47,5 +46,9 @@ public class CategoryController {
    @GetMapping("/searchByName")
    public List<Category> getCategoriesByName(@RequestParam String name) {
        return categoryServices.getCategoryByName(name);
+   }
+   @GetMapping("/searchByNumber")
+   public Category getCategoryByNumber(@RequestParam String number) {
+       return categoryServices.getCategoryByNumber(number);
    }
 }

@@ -22,11 +22,14 @@ public class StoreServices {
     public List<StoreList> getStoresByNumbers(List<String> numbers) {
         return repo.findAllByStoreNumberIn(numbers);
     }
-
     /*public List<StoreList> getStoresByNumber(String number) {
         return repo.findAllByStoreNumberContaining(number);
     }*/
     public List<StoreList> getStoresByName(String name) {
         return repo.findAllByStoreNameContaining(name);
+    }
+
+    public StoreList getStoreByNumber(String number) {
+    return repo.findAllByStoreNumberContaining(number);
     }
 }
